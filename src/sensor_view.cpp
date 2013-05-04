@@ -10,7 +10,7 @@
 #include <QSettings>
 #include "sensor_view_widget.h"
 
-Widget::Widget(QWidget *parent) :
+Widget::Widget(QString list_dir, QWidget *parent) :
     QWidget(parent)
 {
     setupUi(this);
@@ -20,7 +20,6 @@ Widget::Widget(QWidget *parent) :
     list << "*.xml";
     m_model->setNameFilters(list);
 
-    QString list_dir = "F:/sensor/python_sensor/session_files";
     m_model->setRootPath(list_dir);
 
     m_tree_view->setModel(m_model);

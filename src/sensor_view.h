@@ -10,9 +10,9 @@ class Widget : public QWidget, public Ui::Widget
     Q_OBJECT
     
 public:
-    explicit Widget(QWidget *parent = 0);
+    Widget(QString list_dir, QWidget *parent = NULL);
     ~Widget();
-    
+
 private slots:
     void on_m_tree_view_doubleClicked(const QModelIndex &index);
 
